@@ -3,10 +3,10 @@
 
 Repositorio de prácticas de **Desarrollo Móvil** realizadas con **Flutter y Dart**.
 
-| #  | Práctica    | Descripción                   | Link de GitHub    |
-| -- | ----------- | ----------------------------- | ----------------- |
-| 2  | Práctica 2  | Inicialización de un nuevo proyecto con flutter en el cual se trabajo con un contador explorando, colores, tipografía, etc. | [Ver práctica](#) |
-| 3  | Práctica 3  | Descripción de la práctica 3  | [Ver práctica](#) |
+| Práctica    | Descripción                   | Link   |
+| ----------- | ----------------------------- | ----------------- |
+| Práctica 2  | Inicialización de un nuevo proyecto con flutter en el cual se trabajo con un contador explorando, colores, tipografía, etc. | [Ver práctica](#) |
+| Práctica 3  | Descripción de la práctica 3  | [Ver práctica](#) |
 
 
 ## 👨‍💻 Datos
