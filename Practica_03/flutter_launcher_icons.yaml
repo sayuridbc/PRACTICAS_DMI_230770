@@ -2,6 +2,6 @@ flutter_launcher_icons:
   android: true
   ios: true
   web: true
-  image_path: "assets/images/chat_app_icon.svg"
+  image_path: "images/snoopy.jpg"
   min_sdk_android: 21
   remove_alpha_ios: false
