@@ -1,4 +1,4 @@
-# Práctica 02 — Contador personalizado
+# Práctica 02 — Contador personalizado por Say
 
 ## Descripción
 
@@ -26,17 +26,25 @@ Una de las principales características implementadas fue el cambio de color del
 
 ## Evidencia de la práctica
 
+### Contador en un "Click" cuando es igual a 1
+
+![Contador](./flutter_app_230770/images/uno.png)
+
+### Contador que cambia a "Clicks" cuando es mayor a 1
+
+![Contador](./flutter_app_230770/images/image.png)
+
 ### Contador en valor positivo
 
-![Contador positivo](./capturas/contador_positivo.png)
+![Contador positivo](./flutter_app_230770/images/Captura%20de%20pantalla%202026-09-28%20210646.png)
 
 ### Contador en valor negativo
 
-![Contador negativo](./capturas/contador_negativo.png)
+![Contador negativo](./flutter_app_230770/images/Captura%20de%20pantalla%202026-09-28%20210657.png)
 
 ### Contador en cero
 
-![Contador en cero](./capturas/contador_cero.png)
+![Contador en cero](./flutter_app_230770/images/Captura%20de%20pantalla%202026-09-28%20210630.png)
 
 ## 🛠️ Tecnologías utilizadas
 
