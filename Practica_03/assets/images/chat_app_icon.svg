@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#5D4691" />
+      <stop offset="100%" stop-color="#2E214E" />
+    </linearGradient>
+    <linearGradient id="bubble" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#8A6BDA" />
+      <stop offset="100%" stop-color="#6F4CCF" />
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="220" fill="url(#bg)"/>
+  <rect x="120" y="180" width="784" height="660" rx="210" fill="url(#bubble)"/>
+  <rect x="220" y="300" width="584" height="364" rx="140" fill="#ffffff" opacity="0.96"/>
+  <path d="M220 620 Q512 760 804 620" fill="none" stroke="#ffffff" stroke-width="54" stroke-linecap="round"/>
+  <rect x="590" y="420" width="160" height="120" rx="36" fill="#F4B95F"/>
+  <text x="512" y="535" text-anchor="middle" font-size="130" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#ffffff">Sí</text>
+</svg>
