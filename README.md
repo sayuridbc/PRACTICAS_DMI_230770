@@ -99,15 +99,8 @@ Hola ❤️                                      19:42
 
 La hora se obtiene a partir de la fecha y hora actual en el momento en que se envía el mensaje.
 
-![Mensajes con hora](images/mensajes_hora.png)
+![Mensajes con hora](/Practica_03/images/hora.png)
 
----
-
-##  Ícono personalizado
-
-Se creó un **ícono personalizado para la aplicación**, reemplazando el ícono predeterminado de Flutter.
-
-Esto permite darle una identidad visual propia al proyecto y mejorar su presentación.
 
 ---
 
@@ -117,25 +110,11 @@ Esto permite darle una identidad visual propia al proyecto y mejorar su presenta
 
 La siguiente captura muestra la interfaz principal de la aplicación y la conversación entre el usuario y las respuestas automáticas.
 
-![Pantalla principal](images/chat_principal.png)
+![Pantalla principal](/Practica_03/images/principal.png)
 
 ### Respuestas automáticas
 
 La aplicación genera respuestas utilizando la distribución solicitada de **40% Sí, 40% No y 20% Tal vez**.
-
-![Respuestas automáticas](images/respuestas.png)
-
-### Hora de envío
-
-Cada mensaje muestra la hora correspondiente dentro de su burbuja.
-
-![Mensajes con hora](images/mensajes_hora.png)
-
-### Ícono personalizado
-
-Se muestra el ícono personalizado utilizado para identificar la aplicación.
-
-![Ícono personalizado](images/icono_app.png)
 
 ---
 
