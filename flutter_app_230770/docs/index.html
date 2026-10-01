@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 02 — Contador personalizado por Say</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --panel-2: #1f2937;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #3b82f6;
+        --green: #22c55e;
+        --red: #ef4444;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #020817 0%, #111827 100%);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+
+      h1, h2, h3 {
+        margin-top: 0;
+      }
+
+      .card {
+        background: rgba(17, 24, 39, 0.95);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        margin-bottom: 28px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(59, 130, 246, 0.18);
+        color: #bfdbfe;
+        border: 1px solid rgba(96, 165, 250, 0.4);
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      p, li {
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .feature {
+        background: var(--panel-2);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .feature strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .diagram {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        background: #0b1220;
+        margin-top: 18px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: white;
+      }
+
+      .button.secondary {
+        background: transparent;
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        color: var(--text);
+      }
+
+      .button:hover {
+        opacity: 0.9;
+      }
+
+      ul {
+        margin: 0.5rem 0 0 1.2rem;
+      }
+
+      .value-green { color: var(--green); font-weight: 700; }
+      .value-red { color: var(--red); font-weight: 700; }
+      .value-neutral { color: #d1d5db; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <span class="badge">Flutter</span>
+        <h1>Práctica 02 — Contador personalizado por Say</h1>
+        <p>
+          En esta práctica se desarrolló una aplicación de <strong>contador en Flutter</strong>,
+          con modificaciones en la interfaz y en el comportamiento del contador.
+        </p>
+        <p>
+          La aplicación permite aumentar y disminuir un valor numérico y personaliza la
+          apariencia del número según su valor:
+        </p>
+        <ul>
+          <li><span class="value-green">Verde</span>: valor positivo</li>
+          <li><span class="value-red">Rojo</span>: valor negativo</li>
+          <li><span class="value-neutral">Blanco/neutral</span>: valor cero</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Modificaciones realizadas</h2>
+        <div class="grid">
+          <div class="feature">
+            <strong>Contador</strong>
+            Se implementó un contador que puede aumentar y disminuir.
+          </div>
+          <div class="feature">
+            <strong>Tipografía</strong>
+            Se modificó la fuente para mostrar el número con estilo propio.
+          </div>
+          <div class="feature">
+            <strong>Color dinámico</strong>
+            El número cambia según si es positivo, negativo o cero.
+          </div>
+          <div class="feature">
+            <strong>Interfaz</strong>
+            Se personalizó la apariencia visual de la app.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Diagrama de arquitectura</h2>
+        <p>Este diagrama describe la estructura general de la aplicación y sus componentes.</p>
+        <img class="diagram" src="architecture-preview.png" alt="Diagrama de arquitectura" />
+        <div class="actions">
+          <a class="button primary" href="architecture.html" target="_blank" rel="noopener">
+            Ver diagrama interactivo
+          </a>
+          <a class="button secondary" href="../README.md" target="_blank" rel="noopener">
+            Ver README original
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Tecnologías utilizadas</h2>
+        <ul>
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>Visual Studio Code</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
