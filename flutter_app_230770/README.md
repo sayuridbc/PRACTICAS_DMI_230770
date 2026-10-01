@@ -46,6 +46,14 @@ Una de las principales características implementadas fue el cambio de color del
 
 ![Contador en cero](/flutter_app_230770/images/Captura%20de%20pantalla%202026-09-28%20210630.png)
 
+## 🏗️ Diagrama de arquitectura
+
+A continuación se muestra el diagrama de arquitectura generado para la aplicación:
+
+![Diagrama de arquitectura](Architecture/architecture.visual-check.1440x900.dark.png)
+
+Puedes abrir la versión interactiva del diagrama en el siguiente enlace: [Architecture/architecture.html](Architecture/architecture.html)
+
 ## 🛠️ Tecnologías utilizadas
 
 * Flutter
