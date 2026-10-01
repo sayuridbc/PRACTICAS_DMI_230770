@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Arquitectura real de flutter_app_230770",
+    "quality_profile": "showcase",
+    "output": "architecture.html"
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [20, 110],
+    "cols": 4,
+    "gapX": 14,
+    "gapY": 76,
+    "cellW": 240,
+    "cellH": 100
+  },
+  "components": [
+    {
+      "id": "user",
+      "type": "external",
+      "label": "Usuario",
+      "sublabel": "Interactúa con el contador",
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": "flutterApp",
+      "type": "frontend",
+      "label": "Aplicación Flutter",
+      "sublabel": "main.dart · runApp(MyApp)",
+      "row": 0,
+      "col": 1,
+      "size": [230, 100]
+    },
+    {
+      "id": "activeScreen",
+      "type": "frontend",
+      "label": "CounterFunctionsScreen",
+      "sublabel": "MaterialApp.home\nSuma, resta y reinicio",
+      "row": 0,
+      "col": 2,
+      "size": [230, 100]
+    },
+    {
+      "id": "localState",
+      "type": "backend",
+      "label": "Estado local de UI",
+      "sublabel": "int clickCounter · setState()",
+      "row": 1,
+      "col": 3,
+      "size": [230, 100]
+    },
+    {
+      "id": "screenWidgets",
+      "type": "frontend",
+      "label": "Widgets de la pantalla activa",
+      "sublabel": "Scaffold · AppBar · contador\nBotones + / − · reinicio",
+      "row": 0,
+      "col": 3,
+      "size": [230, 100]
+    },
+    {
+      "id": "counterScreen",
+      "type": "frontend",
+      "label": "CounterScreen",
+      "sublabel": "Definida, no conectada a home/rutas",
+      "row": 2,
+      "col": 2,
+      "size": [230, 100]
+    },
+    {
+      "id": "assets",
+      "type": "external",
+      "label": "Recursos de presentación",
+      "sublabel": "BarlowCondensed · pubspec.yaml",
+      "row": 2,
+      "col": 3,
+      "size": [230, 100]
+    }
+  ],
+  "connections": [
+    { "from": "user", "to": "flutterApp", "label": "abre e interactúa" },
+    { "from": "flutterApp", "to": "activeScreen", "label": "MaterialApp.home", "labelAt": [604, 224] },
+    { "from": "activeScreen", "to": "screenWidgets", "label": "construye la interfaz", "labelAt": [400, 224] },
+    { "from": "screenWidgets", "to": "localState", "label": "tap: cambia el contador", "labelAt": [1110, 260] },
+    { "from": "localState", "to": "screenWidgets", "label": "setState actualiza la UI", "labelAt": [1110, 400] },
+    { "from": "activeScreen", "to": "assets", "label": "usa la fuente declarada", "labelAt": [898, 400] }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Alcance comprobado en el código",
+      "items": [
+        "Estado efímero dentro del StatefulWidget; sin Provider, BLoC ni repositorios.",
+        "No se encontraron clientes HTTP, APIs, autenticación ni persistencia de datos.",
+        "CounterScreen está definida e importada, pero no está conectada al flujo de inicio ni a rutas."
+      ]
+    }
+  ]
+}
