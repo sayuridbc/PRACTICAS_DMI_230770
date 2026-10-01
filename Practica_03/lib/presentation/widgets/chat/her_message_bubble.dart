@@ -4,10 +4,7 @@ import 'package:yes_no_app/domain/chat_message.dart';
 class HerMessageBubble extends StatelessWidget {
   final ChatMessage message;
 
-  const HerMessageBubble({
-    super.key,
-    required this.message,
-  });
+  const HerMessageBubble({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -38,25 +35,27 @@ class HerMessageBubble extends StatelessWidget {
                 const SizedBox(width: 8),
                 Text(
                   message.formattedTime,
-                  style: const TextStyle(
-                    color: Colors.white70,
-                    fontSize: 11,
-                  ),
+                  style: const TextStyle(color: Colors.white70, fontSize: 11),
                 ),
               ],
             ),
           ),
         ),
-        const SizedBox(height: 5),
-        const _ImageBubble(),
-        const SizedBox(height: 10),
+        if (message.imageUrl != null) ...[
+          const SizedBox(height: 5),
+          _ImageBubble(imageUrl: message.imageUrl!),
+          const SizedBox(height: 10),
+        ] else
+          const SizedBox(height: 10),
       ],
     );
   }
 }
 
 class _ImageBubble extends StatelessWidget {
-  const _ImageBubble();
+  final String imageUrl;
+
+  const _ImageBubble({required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -64,11 +63,25 @@ class _ImageBubble extends StatelessWidget {
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
-      child: Image.asset(
-        'images/gif2.jpg',
+      child: Image.network(
+        imageUrl,
+        webHtmlElementStrategy: WebHtmlElementStrategy.fallback,
         width: size.width * 0.7,
         height: 150,
         fit: BoxFit.cover,
+        loadingBuilder: (context, child, loadingProgress) {
+          if (loadingProgress == null) return child;
+          return SizedBox(
+            width: size.width * 0.7,
+            height: 150,
+            child: const Center(child: CircularProgressIndicator()),
+          );
+        },
+        errorBuilder: (context, error, stackTrace) => SizedBox(
+          width: size.width * 0.7,
+          height: 150,
+          child: const Center(child: Icon(Icons.broken_image_outlined)),
+        ),
       ),
     );
   }

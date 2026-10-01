@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yes_no_app/data/yes_no_api.dart';
 import 'package:yes_no_app/domain/chat_message.dart';
 import 'package:yes_no_app/presentation/widgets/chat/her_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
@@ -13,6 +14,7 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   final ScrollController _scrollController = ScrollController();
+  final YesNoApi _yesNoApi = YesNoApi();
 
   final List<ChatMessage> _messages = [
     ChatMessage(
@@ -27,7 +29,7 @@ class _ChatScreenState extends State<ChatScreen> {
     ),
   ];
 
-  void _sendMessage(String text) {
+  Future<void> _sendMessage(String text) async {
     final userMessage = ChatMessage(
       text: text,
       isUser: true,
@@ -48,35 +50,44 @@ class _ChatScreenState extends State<ChatScreen> {
       }
     });
 
-    Future.delayed(const Duration(milliseconds: 350), () {
-      if (!mounted) return;
+    String replyText;
+    String? imageUrl;
+    try {
+      final reply = await _yesNoApi.getReply();
+      replyText = reply.text;
+      imageUrl = reply.imageUrl;
+    } catch (_) {
+      replyText = 'No pude conectarme con la API. Intenta de nuevo.';
+    }
 
-      final reply = ChatReplyGenerator.generateReply();
-      final responseMessage = ChatMessage(
-        text: reply,
-        isUser: false,
-        sentAt: DateTime.now(),
+    if (!mounted) return;
+
+    setState(() {
+      _messages.add(
+        ChatMessage(
+          text: replyText,
+          isUser: false,
+          sentAt: DateTime.now(),
+          imageUrl: imageUrl,
+        ),
       );
+    });
 
-      setState(() {
-        _messages.add(responseMessage);
-      });
-
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (_scrollController.hasClients) {
-          _scrollController.animateTo(
-            _scrollController.position.maxScrollExtent,
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeOut,
-          );
-        }
-      });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_scrollController.hasClients) {
+        _scrollController.animateTo(
+          _scrollController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
     });
   }
 
   @override
   void dispose() {
     _scrollController.dispose();
+    _yesNoApi.close();
     super.dispose();
   }
 
@@ -86,11 +97,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         leading: const Padding(
           padding: EdgeInsets.all(4.0),
-          child: CircleAvatar(
-            backgroundImage: AssetImage(
-              'images/snoopy.jpg',
-            ),
-          ),
+          child: CircleAvatar(backgroundImage: AssetImage('images/snoopy.jpg')),
         ),
         title: const Text('Mi amor ♥️'),
         centerTitle: false,
