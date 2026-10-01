@@ -52,7 +52,11 @@ A continuación se muestra el diagrama de arquitectura generado para la aplicaci
 
 ![Diagrama de arquitectura](Architecture/architecture.visual-check.1440x900.dark.png)
 
-Puedes abrir la versión interactiva del diagrama en el siguiente enlace: [Architecture/architecture.html](Architecture/architecture.html)
+GitHub Pages del diagrama: https://sayuridbc.github.io/PRACTICAS_DMI_230770/flutter_app_230770/Architecture/architecture.html
+
+Ruta del archivo en el repositorio: [flutter_app_230770/Architecture/architecture.html](flutter_app_230770/Architecture/architecture.html)
+
+También puedes abrirlo localmente en: [Architecture/architecture.html](Architecture/architecture.html)
 
 ## 🛠️ Tecnologías utilizadas
 
