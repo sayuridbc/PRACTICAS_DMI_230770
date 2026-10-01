@@ -1,0 +1,133 @@
+{
+    "schema_version":  1,
+    "diagram_type":  "architecture",
+    "meta":  {
+                 "title":  "Arquitectura de Practica3",
+                 "output":  "Practica3-architecture.html",
+                 "quality_profile":  "showcase"
+             },
+    "components":  [
+                       {
+                           "id":  "usuario",
+                           "type":  "external",
+                           "label":  "Usuario",
+                           "sublabel":  "Escribe y recibe mensajes",
+                           "pos":  [
+                                       35,
+                                       240
+                                   ],
+                           "size":  [
+                                        145,
+                                        72
+                                    ]
+                       },
+                       {
+                           "id":  "app",
+                           "type":  "frontend",
+                           "label":  "Aplicacion Flutter",
+                           "sublabel":  "main.dart; MaterialApp; AppTheme",
+                           "pos":  [
+                                       250,
+                                       240
+                                   ],
+                           "size":  [
+                                        240,
+                                        82
+                                    ]
+                       },
+                       {
+                           "id":  "chat",
+                           "type":  "frontend",
+                           "label":  "ChatScreen",
+                           "sublabel":  "ChatMessage; entrada; burbujas",
+                           "pos":  [
+                                       515,
+                                       240
+                                   ],
+                           "size":  [
+                                        200,
+                                        82
+                                    ]
+                       },
+                       {
+                           "id":  "api_client",
+                           "type":  "backend",
+                           "label":  "YesNoApi",
+                           "sublabel":  "http.Client; getReply(); parsea JSON",
+                           "pos":  [
+                                       500,
+                                       500
+                                   ],
+                           "size":  [
+                                        230,
+                                        82
+                                    ]
+                       },
+                       {
+                           "id":  "yesno",
+                           "type":  "external",
+                           "label":  "yesno.wtf",
+                           "sublabel":  "GET /api; JSON: respuesta + imagen",
+                           "pos":  [
+                                       800,
+                                       500
+                                   ],
+                           "size":  [
+                                        190,
+                                        82
+                                    ]
+                       }
+                   ],
+    "connections":  [
+                        {
+                            "id":  "user-app",
+                            "from":  "usuario",
+                            "to":  "app",
+                            "variant":  "emphasis"
+                        },
+                        {
+                            "id":  "app-chat",
+                            "from":  "app",
+                            "to":  "chat"
+                        },
+                        {
+                            "id":  "chat-api",
+                            "from":  "chat",
+                            "to":  "api_client"
+                        },
+                        {
+                            "id":  "api-request",
+                            "from":  "api_client",
+                            "to":  "yesno",
+                            "label":  "HTTPS GET /api",
+                            "variant":  "emphasis",
+                            "labelDy":  -35
+                        }
+                    ],
+    "cards":  [
+                  {
+                      "title":  "Estado y navegacion",
+                      "dot":  "cyan",
+                      "items":  [
+                                    "ChatScreen guarda _messages en memoria y actualiza con setState.",
+                                    "MaterialApp.home abre ChatScreen; no hay rutas secundarias."
+                                ]
+                  },
+                  {
+                      "title":  "Datos y red",
+                      "dot":  "emerald",
+                      "items":  [
+                                    "ChatMessage contiene texto, autor, hora e imageUrl opcional.",
+                                    "YesNoApi consulta yesno.wtf por http, decodifica JSON y traduce la respuesta."
+                                ]
+                  },
+                  {
+                      "title":  "Alcance del proyecto",
+                      "dot":  "slate",
+                      "items":  [
+                                    "Sin base de datos, persistencia, autenticacion o estado externo.",
+                                    "lib separa config/theme, data, domain, presentation/screens y widgets."
+                                ]
+                  }
+              ]
+}
