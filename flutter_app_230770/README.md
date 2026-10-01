@@ -54,9 +54,7 @@ A continuación se muestra el diagrama de arquitectura generado para la aplicaci
 
 GitHub Pages del diagrama: https://sayuridbc.github.io/PRACTICAS_DMI_230770/flutter_app_230770/Architecture/architecture.html
 
-Ruta del archivo en el repositorio: [flutter_app_230770/Architecture/architecture.html](flutter_app_230770/Architecture/architecture.html)
 
-También puedes abrirlo localmente en: [Architecture/architecture.html](Architecture/architecture.html)
 
 ## 🛠️ Tecnologías utilizadas
 
