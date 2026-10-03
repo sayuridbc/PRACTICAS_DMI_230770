@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Practica 03 — Flutter Chat Architecture",
+    "output": "Archictecture/archify-architecture-practica-03-20261003-144922/practica-03-architecture.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/sayuridbc/PRACTICAS_DMI_230770.git",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "bb4df9f124a3c18a6a1676403bce629520e073be"
+    }
+  },
+  "components": [
+    {
+      "id": "app",
+      "type": "frontend",
+      "label": "MyApp / Flutter entry",
+      "sublabel": "runApp → MaterialApp",
+      "pos": [
+        40,
+        145
+      ],
+      "size": [
+        170,
+        72
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/main.dart",
+          "line": 6,
+          "end_line": 18
+        }
+      ]
+    },
+    {
+      "id": "messages",
+      "type": "frontend",
+      "label": "MessagesScreen",
+      "sublabel": "Home screen · conversation tile",
+      "pos": [
+        320,
+        145
+      ],
+      "size": [
+        180,
+        72
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/presentation/screens/messages/messages_screen.dart",
+          "line": 5,
+          "end_line": 10
+        },
+        {
+          "path": "Practica_03/lib/main.dart",
+          "line": 13,
+          "end_line": 18
+        }
+      ]
+    },
+    {
+      "id": "chat",
+      "type": "frontend",
+      "label": "ChatScreen",
+      "sublabel": "Conversation · in-memory messages",
+      "pos": [
+        640,
+        145
+      ],
+      "size": [
+        205,
+        78
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/presentation/screens/chat/chat_screen.dart",
+          "line": 15,
+          "end_line": 30
+        },
+        {
+          "path": "Practica_03/lib/presentation/screens/chat/chat_screen.dart",
+          "line": 32,
+          "end_line": 74
+        },
+        {
+          "path": "Practica_03/lib/presentation/screens/chat/chat_screen.dart",
+          "line": 110,
+          "end_line": 123
+        }
+      ]
+    },
+    {
+      "id": "api_client",
+      "type": "backend",
+      "label": "YesNoApi",
+      "sublabel": "HTTP GET · parse image · choose Sí/No/Tal vez",
+      "pos": [
+        990,
+        145
+      ],
+      "size": [
+        220,
+        82
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/data/yes_no_api.dart",
+          "line": 13,
+          "end_line": 24
+        },
+        {
+          "path": "Practica_03/lib/data/yes_no_api.dart",
+          "line": 26,
+          "end_line": 61
+        },
+        {
+          "path": "Practica_03/pubspec.yaml",
+          "line": 31,
+          "end_line": 38
+        }
+      ]
+    },
+    {
+      "id": "yesno_api",
+      "type": "external",
+      "label": "yesno.wtf API",
+      "sublabel": "https://yesno.wtf/api",
+      "pos": [
+        1350,
+        145
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/data/yes_no_api.dart",
+          "line": 20,
+          "end_line": 21
+        },
+        {
+          "path": "Practica_03/lib/data/yes_no_api.dart",
+          "line": 28,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "id": "theme",
+      "type": "frontend",
+      "label": "AppTheme",
+      "sublabel": "Material 3 · selected color seed",
+      "pos": [
+        40,
+        380
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/config/theme/app_theme.dart",
+          "line": 3,
+          "end_line": 28
+        },
+        {
+          "path": "Practica_03/lib/main.dart",
+          "line": 13,
+          "end_line": 17
+        }
+      ]
+    },
+    {
+      "id": "assets",
+      "type": "frontend",
+      "label": "Bundled image assets",
+      "sublabel": "images/ · assets/images/ · images/snoopy.jpg",
+      "pos": [
+        320,
+        380
+      ],
+      "size": [
+        220,
+        76
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/pubspec.yaml",
+          "line": 63,
+          "end_line": 65
+        },
+        {
+          "path": "Practica_03/lib/presentation/screens/messages/messages_screen.dart",
+          "line": 104,
+          "end_line": 107
+        },
+        {
+          "path": "Practica_03/lib/presentation/screens/chat/chat_screen.dart",
+          "line": 98,
+          "end_line": 101
+        }
+      ]
+    },
+    {
+      "id": "ui_widgets",
+      "type": "frontend",
+      "label": "Presentation widgets",
+      "sublabel": "MessageFieldBox · message bubbles · YessConnectMark",
+      "pos": [
+        640,
+        380
+      ],
+      "size": [
+        235,
+        78
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/presentation/widgets/shared/message_field_box.dart",
+          "line": 3,
+          "end_line": 25
+        },
+        {
+          "path": "Practica_03/lib/presentation/widgets/shared/yess_connect_mark.dart",
+          "line": 3,
+          "end_line": 32
+        },
+        {
+          "path": "Practica_03/lib/presentation/widgets/chat/her_message_bubble.dart",
+          "line": 4,
+          "end_line": 83
+        }
+      ]
+    },
+    {
+      "id": "chat_message",
+      "type": "backend",
+      "label": "ChatMessage",
+      "sublabel": "Domain value · text, sender, time, optional image URL",
+      "pos": [
+        640,
+        580
+      ],
+      "size": [
+        245,
+        76
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/domain/chat_message.dart",
+          "line": 1,
+          "end_line": 19
+        },
+        {
+          "path": "Practica_03/lib/presentation/screens/chat/chat_screen.dart",
+          "line": 19,
+          "end_line": 30
+        }
+      ]
+    },
+    {
+      "id": "remote_gif",
+      "type": "external",
+      "label": "Remote image URL",
+      "sublabel": "URL supplied in the API response",
+      "pos": [
+        1230,
+        380
+      ],
+      "size": [
+        205,
+        76
+      ],
+      "sources": [
+        {
+          "path": "Practica_03/lib/data/yes_no_api.dart",
+          "line": 41,
+          "end_line": 56
+        },
+        {
+          "path": "Practica_03/lib/presentation/widgets/chat/her_message_bubble.dart",
+          "line": 58,
+          "end_line": 83
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "entry-to-messages",
+      "from": "app",
+      "to": "messages",
+      "label": "sets home screen",
+      "variant": "emphasis"
+    },
+    {
+      "id": "messages-to-chat",
+      "from": "messages",
+      "to": "chat",
+      "label": "tap → push ChatScreen"
+    },
+    {
+      "id": "chat-to-api",
+      "from": "chat",
+      "to": "api_client",
+      "label": "awaits getReply()"
+    },
+    {
+      "id": "api-to-service",
+      "from": "api_client",
+      "to": "yesno_api",
+      "label": "GET /api · JSON",
+      "variant": "emphasis"
+    },
+    {
+      "id": "entry-to-theme",
+      "from": "app",
+      "to": "theme",
+      "label": "builds ThemeData",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "messages-to-assets",
+      "from": "messages",
+      "to": "assets",
+      "label": "loads bundled Snoopy image",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "chat-to-assets",
+      "from": "chat",
+      "to": "assets",
+      "label": "loads bundled Snoopy image",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "messages-to-widgets",
+      "from": "messages",
+      "to": "ui_widgets",
+      "label": "uses YessConnectMark",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "chat-to-widgets",
+      "from": "chat",
+      "to": "ui_widgets",
+      "label": "hosts input and renders bubbles",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "chat-to-domain",
+      "from": "chat",
+      "to": "chat_message",
+      "label": "creates and holds messages",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "domain-to-widgets",
+      "from": "chat_message",
+      "to": "ui_widgets",
+      "label": "message values rendered",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "widgets-to-image",
+      "from": "ui_widgets",
+      "to": "remote_gif",
+      "label": "Image.network(imageUrl)"
+    }
+  ]
+}

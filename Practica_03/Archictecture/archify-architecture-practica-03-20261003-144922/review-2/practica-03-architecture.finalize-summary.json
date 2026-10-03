@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\candidate.json",
+    "sha256": "32b5f945f89d64ae13a85d6a3039599c4a26b1132d7a32c6d228fdf8477410e1",
+    "bytes": 8478
+  },
+  "artifact": {
+    "path": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\practica-03-architecture.html",
+    "sha256": "55b30b7b7b8e70dbf58c164847837bb579fa0a6d96b3f93de9b3e280126b4169",
+    "bytes": 773290
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\review-2\\practica-03-architecture.finalize.json",
+    "summaryReceipt": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\review-2\\practica-03-architecture.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\review-2\\practica-03-architecture.browser-check.json"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "timeout"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 21930,
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 5,
+      "routesOverSuggestedBends": 3
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "messages-to-assets",
+            "from": "messages",
+            "to": "assets",
+            "label": "loads bundled Snoopy image",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "chat-to-widgets",
+            "from": "chat",
+            "to": "ui_widgets",
+            "label": "hosts input and renders bubbles",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "point": [
+            728.5,
+            331
+          ]
+        },
+        {
+          "left": {
+            "id": "messages-to-assets",
+            "from": "messages",
+            "to": "assets",
+            "label": "loads bundled Snoopy image",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "chat-to-domain",
+            "from": "chat",
+            "to": "chat_message",
+            "label": "creates and holds messages",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "point": [
+            765.5,
+            331
+          ]
+        },
+        {
+          "left": {
+            "id": "chat-to-assets",
+            "from": "chat",
+            "to": "assets",
+            "label": "loads bundled Snoopy image",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "right": {
+            "id": "chat-to-domain",
+            "from": "chat",
+            "to": "chat_message",
+            "label": "creates and holds messages",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "point": [
+            756.5,
+            247
+          ],
+          "sharedNode": "chat"
+        },
+        {
+          "left": {
+            "id": "chat-to-domain",
+            "from": "chat",
+            "to": "chat_message",
+            "label": "creates and holds messages",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "right": {
+            "id": "widgets-to-image",
+            "from": "ui_widgets",
+            "to": "remote_gif",
+            "label": "Image.network(imageUrl)",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "point": [
+            765.5,
+            480
+          ]
+        },
+        {
+          "left": {
+            "id": "domain-to-widgets",
+            "from": "chat_message",
+            "to": "ui_widgets",
+            "label": "message values rendered",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "right": {
+            "id": "widgets-to-image",
+            "from": "ui_widgets",
+            "to": "remote_gif",
+            "label": "Image.network(imageUrl)",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "point": [
+            579,
+            556
+          ],
+          "sharedNode": "ui_widgets"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "chat-to-domain",
+            "from": "chat",
+            "to": "chat_message",
+            "label": "creates and holds messages",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "bends": 4,
+          "stretch": 1.088
+        },
+        {
+          "relationship": {
+            "id": "domain-to-widgets",
+            "from": "chat_message",
+            "to": "ui_widgets",
+            "label": "message values rendered",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "bends": 4,
+          "stretch": 1.277
+        },
+        {
+          "relationship": {
+            "id": "widgets-to-image",
+            "from": "ui_widgets",
+            "to": "remote_gif",
+            "label": "Image.network(imageUrl)",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "messages → assets crosses chat → ui_widgets: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "messages → assets crosses chat → chat_message: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "chat → assets and chat → chat_message cross next to chat: move node assets or chat_message so the two reach chat from different sides (for example one level with it, one directly above or below it).",
+      "chat → chat_message crosses ui_widgets → remote_gif: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "chat_message → ui_widgets and ui_widgets → remote_gif cross next to ui_widgets: move node chat_message or remote_gif so the two reach ui_widgets from different sides (for example one level with it, one directly above or below it).",
+      "chat → chat_message needs 4 bends: move node chat or chat_message so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "chat_message → ui_widgets needs 4 bends: move node chat_message or ui_widgets so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "ui_widgets → remote_gif needs 3 bends: move node ui_widgets or remote_gif so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a1f34eb4-1cd0-436e-b84a-c6d3347441bb",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\candidate.json",
+  "output": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\practica-03-architecture.html",
+  "specification": {
+    "sha256": "af8e4edf344d5b64b92d69ea789412b5db47c656039cde4cc80bbda3f65e3858",
+    "bytes": 8478
+  },
+  "artifact": {
+    "sha256": "9cc49f950495a4ae69a5f89675db72fa62753ece661b6e58a6da7fece7e1add6",
+    "bytes": 772964
+  }
+}

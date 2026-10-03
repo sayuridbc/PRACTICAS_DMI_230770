@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\candidate.json",
+    "sha256": "af8e4edf344d5b64b92d69ea789412b5db47c656039cde4cc80bbda3f65e3858",
+    "bytes": 8478
+  },
+  "artifact": {
+    "path": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\practica-03-architecture.html",
+    "sha256": "9cc49f950495a4ae69a5f89675db72fa62753ece661b6e58a6da7fece7e1add6",
+    "bytes": 772964
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\practica-03-architecture.finalize.json",
+    "summaryReceipt": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\practica-03-architecture.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\sayur\\Desktop\\PRACTICAS_DMI_230770\\Practica_03\\Archictecture\\archify-architecture-practica-03-20261003-144922\\practica-03-architecture.browser-check.json"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "check-failed"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 26113,
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 2,
+      "routesOverSuggestedBends": 2,
+      "routesOverSuggestedStretch": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "chat-to-assets",
+            "from": "chat",
+            "to": "assets",
+            "label": "loads bundled Snoopy image",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "right": {
+            "id": "messages-to-widgets",
+            "from": "messages",
+            "to": "ui_widgets",
+            "label": "uses YessConnectMark",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "point": [
+            437,
+            356
+          ]
+        },
+        {
+          "left": {
+            "id": "messages-to-widgets",
+            "from": "messages",
+            "to": "ui_widgets",
+            "label": "uses YessConnectMark",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "chat-to-domain",
+            "from": "chat",
+            "to": "chat_message",
+            "label": "creates and holds messages",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "point": [
+            750.5,
+            376.84615384615387
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "entry-to-theme",
+            "from": "app",
+            "to": "theme",
+            "label": "builds ThemeData",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "bends": 4,
+          "stretch": 1.185
+        },
+        {
+          "relationship": {
+            "id": "chat-to-domain",
+            "from": "chat",
+            "to": "chat_message",
+            "label": "creates and holds messages",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "bends": 4,
+          "stretch": 1.699
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "chat → assets crosses messages → ui_widgets: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "messages → ui_widgets crosses chat → chat_message: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "app → theme needs 4 bends: move node app or theme so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "chat → chat_message needs 4 bends: move node chat or chat_message so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}
