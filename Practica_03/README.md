@@ -119,7 +119,7 @@ A continuación se muestran las capturas correspondientes a cada respuesta.
 La aplicación muestra una respuesta afirmativa dentro de la conversación.
 
 ### Captura
-![Pantalla principal](/Practica_03/images/si.png)
+![Si](/Practica_03/images/si.png)
 
 ---
 
@@ -127,7 +127,7 @@ La aplicación muestra una respuesta afirmativa dentro de la conversación.
 
 La aplicación también puede generar una respuesta negativa dentro de la conversación.
 
-![Pantalla principal](/Practica_03/images/no.png)
+![No](/Practica_03/images/no.png)
 
 ---
 
@@ -135,7 +135,7 @@ La aplicación también puede generar una respuesta negativa dentro de la conver
 
 La aplicación puede generar una respuesta de tipo "Tal vez" como una tercera posibilidad dentro de la conversación.
 
-![Pantalla principal](/Practica_03/images/talvez.png)
+![Tal vez](/Practica_03/images/talvez.png)
 
 ---
 
@@ -143,7 +143,7 @@ La aplicación puede generar una respuesta de tipo "Tal vez" como una tercera po
 
 La aplicación muestra la hora correspondiente a los mensajes dentro de la conversación, permitiendo identificar el momento en el que se realizó la interacción.
 
-![Pantalla principal](/Practica_03/images/hora.png)
+![Hora](/Practica_03/images/hora.png)
 
 ---
 
@@ -168,6 +168,11 @@ El flujo principal de la aplicación es el siguiente:
 7. Los mensajes se muestran dentro de la conversación junto con su hora correspondiente.
 
 ---
+
+# Diagrama de Arquitectura con Archify
+
+![Diagrama](/Practica_03/images/diagrama.png)
+
 
 
 # Conclusión
