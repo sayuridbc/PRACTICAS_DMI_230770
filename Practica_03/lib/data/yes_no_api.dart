@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:http/http.dart' as http;
 
@@ -10,9 +11,12 @@ class YesNoReply {
 }
 
 class YesNoApi {
-  YesNoApi({http.Client? client}) : _client = client ?? http.Client();
+  YesNoApi({http.Client? client, int Function(int max)? nextInt})
+    : _client = client ?? http.Client(),
+      _nextInt = nextInt ?? Random().nextInt;
 
   final http.Client _client;
+  final int Function(int max) _nextInt;
   static const _endpoint = 'https://yesno.wtf/api';
   static const _maxAttempts = 10;
   static final Set<String> _usedImageUrls = {};
@@ -35,20 +39,18 @@ class YesNoApi {
       }
 
       final data = jsonDecode(response.body) as Map<String, dynamic>;
-      final answer = data['answer'] as String?;
       final imageUrl = data['image'] as String?;
 
-      if (answer == null || imageUrl == null) {
+      if (imageUrl == null) {
         throw const FormatException('La respuesta de la API está incompleta.');
       }
 
       if (_usedImageUrls.add(imageUrl)) {
         return YesNoReply(
-          text: switch (answer.toLowerCase()) {
-            'yes' => 'Sí',
-            'no' => 'No',
-            'maybe' => 'Tal vez',
-            _ => answer,
+          text: switch (_nextInt(100)) {
+            < 40 => 'Sí',
+            < 80 => 'No',
+            _ => 'Tal vez',
           },
           imageUrl: imageUrl,
         );

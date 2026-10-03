@@ -116,6 +116,15 @@ La siguiente captura muestra la interfaz principal de la aplicación y la conver
 
 La aplicación genera respuestas utilizando la distribución solicitada de **40% Sí, 40% No y 20% Tal vez**.
 
+## Respuesta con Tal Vez
+![Pantalla principal](/Practica_03/images/talvez.png)
+
+## Respuesta con Si
+![Pantalla principal](/Practica_03/images/si.png)
+
+## Respuesta con No
+![Pantalla principal](/Practica_03/images/no.png)
+
 ---
 
 ## ✅ Requisitos implementados
