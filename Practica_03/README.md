@@ -172,7 +172,7 @@ El flujo principal de la aplicación es el siguiente:
 # Diagrama de Arquitectura con Archify
 
 ![Diagrama](/Practica_03/images/diagrama.png)
-
+https://sayuridbc.github.io/PRACTICAS_DMI_230770/Practica_03/Archictecture/Practica3-architecture.html
 
 
 # Conclusión
