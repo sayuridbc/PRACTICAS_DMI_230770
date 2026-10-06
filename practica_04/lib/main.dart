@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'package:practica_04/config/theme/app_theme.dart';
 import 'package:practica_04/presentation/providers/discover_provider.dart';
 import 'package:practica_04/presentation/screens/discover/discover_screen.dart';
