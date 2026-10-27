@@ -1,0 +1,5 @@
+
+class MovieRepositoryImpl extends MovieRepository {
+  
+
+}

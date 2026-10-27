@@ -1,4 +1,4 @@
-import '../domain/entities/movie.dart';
+import '../entities/movie.dart';
 
 abstract class MoviesRepository {
 
